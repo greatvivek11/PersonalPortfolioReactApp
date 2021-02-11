@@ -15,7 +15,7 @@ function App() {
         <p>{headline3} {headline4}</p>
         <ToDoTasks></ToDoTasks>
         <p>Checkout my LinkedIn <a href="https://www.linkedin.com/in/vivek-kaushik/" target="_blank">Vivek Kaushik LinkedIn</a></p>
-        <p>Checkout Github Repo </p>
+        <p>Checkout Github Repo <a href="https://github.com/greatvivek11/PersonalPortfolioReactApp" target="_blank">PersonalPortfolioReactApp</a></p>
         <p>Stay tuned.</p>
     </div>
   );
