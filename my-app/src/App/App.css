@@ -1,8 +1,12 @@
 .App {
   text-align: center;
+  align-items: center;
   padding-bottom: 1rem;
 }
 
+.changeLogs{
+  list-style-position: inside;
+}
 .coverPhoto{
   height: 30rem;
   width: 50rem;

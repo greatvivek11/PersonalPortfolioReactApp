@@ -1,11 +1,11 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import { updateTasks } from '../Service/TasksService';
 import { Button } from 'react-bootstrap';
 import { Trash,PencilSquare } from 'react-bootstrap-icons'
 
 function ListTasks(props) {
     const Tasks = props?.tasks?.tasks;
-    console.log(Tasks);
+    // console.log(Tasks);
     var values = Object.values(props?.tasks);
     var values1 = values[0];
     // console.log(values1);
@@ -19,7 +19,7 @@ function ListTasks(props) {
 
     function onEdit(e,index){
         alert("Work In Progress");
-        console.log(Tasks[index]?.task);
+        // console.log(Tasks[index]?.task);
     }
     return (
         <div>
