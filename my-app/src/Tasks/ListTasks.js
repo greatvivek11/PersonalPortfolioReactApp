@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { updateTasks } from '../Service/TasksService';
 import { Button } from 'react-bootstrap';
+import { Trash,PencilSquare } from 'react-bootstrap-icons'
 
 function ListTasks(props) {
     const Tasks = props?.tasks?.tasks;
@@ -15,6 +16,11 @@ function ListTasks(props) {
         updateTasks(Tasks);
         props.onChange(Tasks);
     }
+
+    function onEdit(e,index){
+        alert("Work In Progress");
+        console.log(Tasks[index]?.task);
+    }
     return (
         <div>
             {Tasks?.map((element,index) => {
@@ -22,7 +28,10 @@ function ListTasks(props) {
                 return (
                 <li>
                     {element?.task}
-                    <Button style={{marginLeft: '0.5rem',margin:'0.5rem', color:'black',backgroundColor:'red'}} onClick={e => onClick(e,index)}>Delete</Button>
+                    <Button type="button" name="edit" style={{marginLeft: '0.5rem',margin:'0.5rem',backgroundColor:'blue',borderColor:'blue'}} onClick={e => onEdit(e,index)}>
+                    <PencilSquare></PencilSquare></Button>
+                    <Button type="button" name="delete" style={{marginLeft: '0.5rem',margin:'0.5rem',backgroundColor:'red',borderColor:'red'}} onClick={e => onClick(e,index)}>
+                    <Trash></Trash></Button>
                 </li>)
             })}
         </div>
