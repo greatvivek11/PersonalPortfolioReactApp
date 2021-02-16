@@ -13,7 +13,7 @@ export async function getTasks(id,pk) {
 
 
 export async function updateTasks(tasks) {
-    console.log("Posting tasks: "+tasks)
+    console.log("Posting tasks")
     const response = await fetch(url+`/api/putTasks`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},

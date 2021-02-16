@@ -4,21 +4,26 @@ import { Button } from 'react-bootstrap';
 
 export default function AddTasks(props) {
     const [Tasks, setTasks] = useState();
+    const [TaskAdded,setTaskAdded] = useState(false);
     // console.log(props.tasks);
 
     function onClickAddTask(){
-        updateTasks(Tasks);
-        // console.log(Tasks);
-        props.onChange(Tasks);
+        if(TaskAdded){
+            updateTasks(Tasks);
+            // console.log(Tasks);
+            props.onChange(Tasks);
+        }
     }
 
     function onInputChange(e){
         // console.log(e.target.value);
         setTasks(props.tasks?.tasks?.concat({task:e.target.value}));
+        setTaskAdded(true);
     }
     function onSubmit(e){
         e.preventDefault();
         e.target.reset();
+        setTaskAdded(false);
     }
 
     return (
