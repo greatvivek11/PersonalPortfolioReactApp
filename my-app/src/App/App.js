@@ -1,22 +1,46 @@
 import './App.css';
-import mypic from '../resources/mypic.jpg'
-import ToDoTasks from '../ToDoTasks/ToDoTasks'
+import mypic from '../resources/mypic.jpg';
+import { getTasks } from '../Service/TasksService';
+import React, { useState, useEffect } from 'react';
+import ListTasks from '../Tasks/ListTasks';
+import AddTasks from '../Tasks/AddTasks';
 
 function App() {
+
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    if(tasks.length===0){
+      getTasks(1,1).then(tasks => {
+        // console.log(tasks)
+        setTasks(tasks);
+      });
+    }
+  },[])
+
+  function handleTaskChange(Tasks){
+    // console.log({tasks:Tasks});
+    setTasks({tasks:Tasks});
+    // console.log(tasks);
+  }
+
   return (
     <div className="App">
       <header>
         <img src={mypic} className="coverPhoto" alt="Cover image"></img>
         <h1>
-        Vivek Kaushik's Personal Portfolio Website
+          Vivek Kaushik's Personal Portfolio Website
         </h1>
       </header>
-        <p>{headline1} {headline2} </p>
-        <p>{headline3} {headline4}</p>
-        <ToDoTasks></ToDoTasks>
-        <p>Checkout my LinkedIn <a href="https://www.linkedin.com/in/vivek-kaushik/" target="_blank">Vivek Kaushik LinkedIn</a></p>
-        <p>Checkout Github Repo <a href="https://github.com/greatvivek11/PersonalPortfolioReactApp" target="_blank">PersonalPortfolioReactApp</a></p>
-        <p>Stay tuned.</p>
+      <p>{headline1} {headline2} </p>
+      <p>{headline3} {headline4}</p>
+      <div>
+        <ListTasks tasks={tasks} onChange={handleTaskChange}></ListTasks>
+      </div>
+      <AddTasks tasks={tasks} onChange={handleTaskChange}></AddTasks>
+      <p>Checkout my LinkedIn <a href="https://www.linkedin.com/in/vivek-kaushik/" target="_blank">Vivek Kaushik LinkedIn</a></p>
+      <p>Checkout Github Repo <a href="https://github.com/greatvivek11/PersonalPortfolioReactApp" target="_blank">PersonalPortfolioReactApp</a></p>
+      <p>Stay tuned.</p>
     </div>
   );
 }

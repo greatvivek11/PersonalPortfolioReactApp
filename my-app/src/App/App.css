@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: aqua;
   padding-bottom: 1rem;
 }
 
@@ -17,7 +16,6 @@ h1{
 p{
   margin-left: 2rem;
   margin-right: 2rem;
-  text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
