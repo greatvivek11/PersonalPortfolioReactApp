@@ -7,7 +7,7 @@ export default function FooterComponent() {
     return (
         <div>
             <Navbar className="justify-content-center" fixed="bottom" bg="dark" variant="dark" expand="xl">
-                    <Navbar.Brand>Connect with me </Navbar.Brand>
+                    <Navbar.Brand>Connect with me @</Navbar.Brand>
                     <Nav activeKey="/home">
                         <Nav.Item>
                             <Nav.Link href="Email:vcoolkaushik@gmail.com" target="_blank"><Envelope size={30} color="orange"></Envelope></Nav.Link>
