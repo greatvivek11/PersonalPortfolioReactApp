@@ -26,8 +26,8 @@ function ListTasks(props) {
             {Tasks?.map((element,index) => {
                 // console.log(element);
                 return (
-                <li>
-                    {element?.task}
+                <li style={{color:"crimson"}} key={index}>
+                    <span style={{color:"black"}}>{element?.task}</span>
                     <Button type="button" name="edit" style={{marginLeft: '0.5rem',margin:'0.5rem',backgroundColor:'blue',borderColor:'blue'}} onClick={e => onEdit(e,index)}>
                     <PencilSquare></PencilSquare></Button>
                     <Button type="button" name="delete" style={{marginLeft: '0.5rem',margin:'0.5rem',backgroundColor:'red',borderColor:'red'}} onClick={e => onClick(e,index)}>

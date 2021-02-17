@@ -3,18 +3,14 @@
   align-items: center;
   padding-bottom: 1rem;
 }
-
 .changeLogs{
   list-style-position: inside;
-}
-.coverPhoto{
-  height: 30rem;
-  width: 50rem;
 }
 
 h1{
   color: crimson;
   font-family: cursive;
+  margin-top: 1rem;
 }
 
 p{
