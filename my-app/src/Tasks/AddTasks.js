@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { updateTasks } from '../Service/TasksService';
+import { updateTasks } from '../Service/Service';
 import { Button } from 'react-bootstrap';
 
 export default function AddTasks(props) {

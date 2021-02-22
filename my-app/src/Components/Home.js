@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ListTasks from '../Tasks/ListTasks';
 import AddTasks from '../Tasks/AddTasks';
 import CarouselComponent from '../Components/CarouselComponent';
-import { getTasks } from '../Service/TasksService';
+import { getTasks } from '../Service/Service';
 import '../styles/home.css';
+import AppContext from "../Components/context";
 
 export default function Home() {
+    const [resources, setResources] = useState([]);
+    const [Strings, setStrings] = useState({});
+    const Context = useContext(AppContext);
+    useEffect(() => {
+        setResources(Context.resources);
+        setStrings(Context.strings);
+    });
+    // console.log(Strings);
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {
@@ -25,14 +34,14 @@ export default function Home() {
     return (
         <div className="Home">
             <header>
-                <CarouselComponent></CarouselComponent>
+                <CarouselComponent resources={resources}/>
                 <h1>
                     Vivek Kaushik's Personal Portfolio Website
                 </h1>
             </header>
-            <p>{headline1} {headline2} </p>
-            <p>{headline3} {headline4}</p>
-            <p>{headline5} {headline6}</p>
+            <p>{Strings?.Headline1}</p>
+            <p>{Strings?.Headline2}</p>
+            <p>{Strings?.Headline3}</p>
             <div>
                 <h1>Tasks</h1>
                 <ListTasks tasks={tasks} onChange={handleTaskChange}></ListTasks>
@@ -41,9 +50,9 @@ export default function Home() {
             <div>
                 <h1>Change Log</h1>
                 <ol className="changeLogs" type="1">
-                    {changeLog.map(
-                        (log) => {
-                            return (<li>{log}</li>)
+                    {Strings?.ChangeLog?.map(
+                        (log,i) => {
+                            return (<li key={i}>{log}</li>)
                         }
                     )}
                 </ol>
@@ -54,19 +63,3 @@ export default function Home() {
         </div >
     );
 }
-const headline1 = "This is a React based FrontEnd website website to demonstrate recruiters my knowledge and understanding of the subject.";
-const headline2 = "I'm planning to learn ReactJS and NodeJS this year 2021, using this as my personal learning project.";
-const headline3 = "This website is hosted on Azure Static Website with complete CI/CD using Github Actions.";
-const headline4 = "I'll be adding various functionalities such as ToDo Task lists which only I'll be able to edit/delete using Azure AD authentication.";
-const headline5 = "I am exploring React features such as - Functinal components, props, hooks which includes useState, useEffect etc.";
-const headline6 = "I'm using Azure CosmosDB to store my tasks in JSON format in a document. And I'm using Azure Functions to retrieve and persist data using cosmosDB bindings.";
-
-const changeLog = ["Added List Tasks functionality to get all tasks from CosmosDB.",
-    "Added Add Tasks functionality to add new tasks to DB.",
-    "Added getTasks and addTasks API using Azure Functions CosmosDB input/ouput bindings.",
-    "Deployed React app to Azure Static Web Apps using Github Actions CI/CD.",
-    "Added Delete tasks functionality.",
-    "Added delete and edit tasks icons.",
-    "Added Carousel feature(Slide Show)",
-"Added Navbar feature","Added Routing functionality in Navbar","Added navbar in footer.",
-"Added background Image in home page."]

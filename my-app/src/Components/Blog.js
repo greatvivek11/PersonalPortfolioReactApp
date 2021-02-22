@@ -1,8 +1,7 @@
-import React from 'react';
 import '../styles/about.css';
-import image from '../resources/Website-Under-Construction-Image.jpg';
 
 export default function Blog() {
+    const image = "https://ppstorageacc123.blob.core.windows.net/personalportfolioblobcontainer/Images/Website-Under-Construction-Image.jpg";
     return (
         <div className="UnderConstruction">
             <h1>Blog Section</h1>

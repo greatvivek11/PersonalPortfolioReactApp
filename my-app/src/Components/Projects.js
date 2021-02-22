@@ -1,8 +1,8 @@
-import React from 'react';
+import {useContext} from 'react';
 import '../styles/about.css';
-import image from '../resources/Website-Under-Construction-Image.jpg';
 
 export default function Projects() {
+    const image = "https://ppstorageacc123.blob.core.windows.net/personalportfolioblobcontainer/Images/Website-Under-Construction-Image.jpg";
     return (
         <div className="UnderConstruction">
             <h1>Projects Section</h1>

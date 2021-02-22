@@ -11,6 +11,18 @@ export async function getTasks(id,pk) {
     .then(res => res.json());
 }
 
+export async function getBlobs() {
+    console.log("fetchings blobs to load resources from blob storage")
+    return await fetch(url+`/api/getResources`)
+    .then(res => res.json(res));
+}
+
+export async function getStrings(link) {
+    console.log("fetchings strings.txt from blob storage")
+    return await fetch(link)
+    .then(res => res.json(res))
+
+}
 
 export async function updateTasks(tasks) {
     console.log("Posting tasks")

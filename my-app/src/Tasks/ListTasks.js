@@ -1,6 +1,6 @@
 import React from 'react';
-import { updateTasks } from '../Service/TasksService';
-import { Button } from 'react-bootstrap';
+import { updateTasks } from '../Service/Service';
+import { Button, Tooltip,OverlayTrigger } from 'react-bootstrap';
 import { Trash,PencilSquare } from 'react-bootstrap-icons'
 
 function ListTasks(props) {
@@ -21,6 +21,12 @@ function ListTasks(props) {
         alert("Work In Progress");
         // console.log(Tasks[index]?.task);
     }
+    const tooltip = (
+        <Tooltip id="Tooltip-basic">
+          Working on it!
+        </Tooltip>
+      );
+      
     return (
         <div>
             {Tasks?.map((element,index) => {
@@ -28,8 +34,10 @@ function ListTasks(props) {
                 return (
                 <li style={{color:"crimson"}} key={index}>
                     <span style={{color:"black"}}>{element?.task}</span>
-                    <Button type="button" name="edit" style={{marginLeft: '0.5rem',margin:'0.5rem',backgroundColor:'blue',borderColor:'blue'}} onClick={e => onEdit(e,index)}>
+                    <OverlayTrigger placement="right" overlay={tooltip}>
+                    <Button type="button" name="edit" style={{marginLeft: '0.5rem',margin:'0.5rem',borderColor:'black'}} >
                     <PencilSquare></PencilSquare></Button>
+                    </OverlayTrigger>
                     <Button type="button" name="delete" style={{marginLeft: '0.5rem',margin:'0.5rem',backgroundColor:'red',borderColor:'red'}} onClick={e => onClick(e,index)}>
                     <Trash></Trash></Button>
                 </li>)
