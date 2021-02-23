@@ -17,8 +17,14 @@ export default function AddTasks(props) {
 
     function onInputChange(e){
         // console.log(e.target.value);
-        setTasks(props.tasks?.tasks?.concat({task:e.target.value}));
-        setTaskAdded(true);
+        var newTask = e.target.value;
+        if(newTask!==""){
+            setTasks(props.tasks?.tasks?.concat({task:newTask}));
+            setTaskAdded(true);    
+        }else{
+            setTaskAdded(false);
+        }
+        
     }
     function onSubmit(e){
         e.preventDefault();

@@ -29,7 +29,7 @@ export async function updateTasks(tasks) {
     const response = await fetch(url+`/api/putTasks`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({id:"1",tasks})
+        body: JSON.stringify({id:"1",tasks:tasks})
     })
     return await response.json();
 }
