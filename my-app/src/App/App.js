@@ -5,7 +5,6 @@ import Routes from '../Components/Routes';
 import FooterComponent from '../Components/FooterComponent';
 import { getBlobs,getStrings } from '../Service/Service';
 import AppContext from "../Components/context";
-import ScrollProgressBar  from "../Components/ScrollProgressBar";
 
 function App() {
 
