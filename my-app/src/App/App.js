@@ -14,13 +14,18 @@ function App() {
   useEffect(() => {
       console.log("Calling resources...")
       getBlobs().then(res => setResources(res));
-    // console.log(resources);
+      // console.log(resources);
   }, []);
 
   useEffect(() => {
+    // console.log(resources[10]);
     getStrings(resources[10]).then(res => setStrings(res));
   }, [resources])
   // console.log(Strings);
+
+  // useEffect(() => {
+  //   getBlogs().then(res => console.log(res));
+  // }, [])
 
   return (
     <div className="App">
