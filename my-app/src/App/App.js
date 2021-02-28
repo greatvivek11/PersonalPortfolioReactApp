@@ -5,6 +5,7 @@ import Routes from '../Components/Routes';
 import FooterComponent from '../Components/FooterComponent';
 import { getBlobs,getStrings } from '../Service/Service';
 import AppContext from "../Components/context";
+import ScrollProgressBar  from "../Components/ScrollProgressBar";
 
 function App() {
 
@@ -14,13 +15,18 @@ function App() {
   useEffect(() => {
       console.log("Calling resources...")
       getBlobs().then(res => setResources(res));
-    // console.log(resources);
+      // console.log(resources);
   }, []);
 
   useEffect(() => {
+    // console.log(resources[10]);
     getStrings(resources[10]).then(res => setStrings(res));
   }, [resources])
   // console.log(Strings);
+
+  // useEffect(() => {
+  //   getBlogs().then(res => console.log(res));
+  // }, [])
 
   return (
     <div className="App">

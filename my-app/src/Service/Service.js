@@ -1,3 +1,4 @@
+import apiFetch from '@wordpress/api-fetch';
 var url=``;
 if(process.env.NODE_ENV == "development") {
     url = `http://localhost:7071`;
@@ -23,6 +24,15 @@ export async function getStrings(link) {
     .then(res => res.json(res))
 
 }
+
+// export async function getBlogs() {
+//     console.log("fetchings blogs from my wordpress")
+//     return await apiFetch( { path: "https://vivekkaushikblog.wordpress.com" } ).then( posts => {
+//         console.log( posts );
+//     } )
+//     .then(res => res.json(res))
+
+// }
 
 export async function updateTasks(tasks) {
     console.log("Posting tasks")
