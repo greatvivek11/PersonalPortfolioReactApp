@@ -1,4 +1,3 @@
-import apiFetch from '@wordpress/api-fetch';
 var url=``;
 if(process.env.NODE_ENV == "development") {
     url = `http://localhost:7071`;
