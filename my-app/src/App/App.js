@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import NavbarComponent from '../Components/NavbarComponent';
 import Routes from '../Components/Routes';
 import FooterComponent from '../Components/FooterComponent';
-import { getBlobs,getStrings } from '../Service/Service';
+import { getBlobs, getStrings } from '../Service/Service';
 import AppContext from "../Components/context";
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
   const [Strings, setStrings] = useState({});
 
   useEffect(() => {
-      console.log("Calling resources...")
-      getBlobs().then(res => setResources(res));
-      // console.log(resources);
+    console.log("Calling resources...")
+    getBlobs().then(res => setResources(res));
+    // console.log(resources);
   }, []);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider value={{resources:resources,strings:Strings}}>
+      <AppContext.Provider value={{ resources: resources, strings: Strings }}>
         <NavbarComponent />
         <Routes />
         <FooterComponent />

@@ -3,19 +3,10 @@
   align-items: center;
   padding-bottom: 1rem;
 }
-.changeLogs{
-  list-style-position: inside;
-}
 
-h1{
-  color: crimson;
-  font-family: cursive;
-  margin-top: 1rem;
-}
-
-p{
-  margin-left: 2rem;
-  margin-right: 2rem;
+html {
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {

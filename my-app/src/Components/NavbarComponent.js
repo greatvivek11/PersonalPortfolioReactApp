@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar,Nav } from 'react-bootstrap';
-// import '../styles/navbar.css';
+import ScrollProgressBar from '../Components/ScrollProgressBar';
 
 export default function NavbarComponent() {
     return (
@@ -16,6 +16,7 @@ export default function NavbarComponent() {
                         <Nav.Link href="/projects">Projects</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
+            <ScrollProgressBar />
             </Navbar>
         </div>
     )

@@ -2,3 +2,13 @@
 background-image: url('../resources/pexels-scott-webb-3255761.jpg');
 margin-bottom: 3rem;
 }
+
+.changeLogs{
+    list-style-position: inside;
+  }
+  
+  h1{
+    color: crimson;
+    font-family: cursive;
+    margin-top: 1rem;
+  }
