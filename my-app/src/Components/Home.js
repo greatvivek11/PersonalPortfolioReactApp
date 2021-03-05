@@ -10,6 +10,11 @@ export default function Home() {
     const [resources, setResources] = useState([]);
     const [Strings, setStrings] = useState({});
     const Context = useContext(AppContext);
+
+    const Headline1 = "Hi! My Name is Vivek Kaushik. I am a Full-Stack Software developer with 2+ years of experience in developing, testing and deploying web, mobile and cloud applications. This is my React based portfolio website to demonstrate recruiters my knowledge and understanding of various technologies such as React, Angular, Node, C#, Azure etc.";
+    const Headline2 = "This website is hosted on Azure Static Website with complete CI/CD using Github Actions. I'll be adding various functionalities such as ToDo Task lists which only I'll be able to edit/delete using Azure AD authentication.";
+    const Headline3 ="I am exploring and learning various React features such as - Functional components, props, hooks, routes, bootstrap etc. I'm using Azure CosmosDB to store my tasks in JSON format in a document. And I'm using Azure Functions to retrieve and persist data using cosmosDB bindings. Kindly reload if tasks don't appear right away.";
+    
     useEffect(() => {
         setResources(Context.resources);
         setStrings(Context.strings);
@@ -39,9 +44,9 @@ export default function Home() {
                     Vivek Kaushik's Personal Portfolio Website
                 </h1>
             </header>
-            <p>{Strings?.Headline1}</p>
-            <p>{Strings?.Headline2}</p>
-            <p>{Strings?.Headline3}</p>
+            <p>{Headline1}</p>
+            <p>{Headline2}</p>
+            <p>{Headline3}</p>
             <div>
                 <h1>Tasks</h1>
                 <ListTasks tasks={tasks} onChange={handleTaskChange}></ListTasks>

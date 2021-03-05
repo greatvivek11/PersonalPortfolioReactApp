@@ -9,7 +9,7 @@
   
   
 #progressBar {
-    background: linear-gradient(to left, green, yellow);
+    background: linear-gradient(to left, red, violet);
     transform-origin: top left;
     transform: scale(0,0);
     opacity: 0;
