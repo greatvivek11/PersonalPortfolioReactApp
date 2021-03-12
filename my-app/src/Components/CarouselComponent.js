@@ -24,7 +24,7 @@ export default function CarouselComponent({resources}) {
         7: { title: "Philosophy", subtitle: "Success and Virtue" },
     }
     return (
-        <Carousel interval={3000}>
+        <Carousel controls="true" indicators="true" keyboard="true" interval={3000}>
             {Images.map((x, i) => {
                 if (i < 8) {
                     return (
@@ -34,8 +34,8 @@ export default function CarouselComponent({resources}) {
                                 src={x}
                                 alt="First slide"
                             />
-                            <Carousel.Caption>
-                                <h3>{coverProp[i].title}</h3>
+                            <Carousel.Caption id="caption">
+                                <h2>{coverProp[i].title}</h2>
                                 <p>{coverProp[i].subtitle}</p>
                             </Carousel.Caption>
                         </Carousel.Item>

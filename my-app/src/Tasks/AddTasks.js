@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { updateTasks } from '../Service/Service';
 import { Button } from 'react-bootstrap';
 
@@ -19,7 +19,7 @@ export default function AddTasks(props) {
         // console.log(e.target.value);
         var newTask = e.target.value;
         if(newTask!==""){
-            setTasks(props.tasks?.tasks?.concat({task:newTask}));
+            setTasks(props?.tasks.concat({task:newTask}));
             setTaskAdded(true);    
         }else{
             setTaskAdded(false);
