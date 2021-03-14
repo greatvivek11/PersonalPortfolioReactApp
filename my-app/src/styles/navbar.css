@@ -1,6 +1,7 @@
 #top-navbar{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: gray;
 }
 #navbar-brand{
@@ -8,11 +9,11 @@
   color: white;
   font-size: 20pt;
 }
-#navlink{
-  color: white;
+#home,#about,#blog,#projects{
+  color: black;
   font-size: 14pt;
 }
-#navlink:hover{
+#home:hover,#about:hover,#blog:hover,#projects:hover{
   size: 16pt;
   color: gold;
   background-color: black;

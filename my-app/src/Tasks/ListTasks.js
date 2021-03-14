@@ -34,8 +34,8 @@ function ListTasks(props) {
     }
 
     return (
-        <div>
-            <table className="table-sm table-hover">
+        <div className="ListTasks">
+            <table className="responsive-table">
                 <tbody>
                     {Tasks?.map((element, index) => {
                         // console.log(element?.task);

@@ -1,15 +1,5 @@
-.ToDoTasks{
-    margin-left: 2rem;
-}
-
-li{
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
 table{
     margin-right: auto;
     margin-left: auto;
-}
-td{
-    text-align: left;
+    overflow-x: auto;
 }

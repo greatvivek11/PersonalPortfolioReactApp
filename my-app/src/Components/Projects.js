@@ -1,4 +1,3 @@
-import {useContext} from 'react';
 import '../styles/tbd.css';
 
 export default function Projects() {

@@ -1,7 +1,12 @@
 .card{
     margin: 10pt;
-    height: 30%;
-    width: 30%;
+    height: auto;
+    width: auto;
     border-radius: 10pt;
     float: left;
+}
+.cardImg{
+    height: auto;
+    width: 10rem;
+    align-content: center;
 }

@@ -1,10 +1,10 @@
 import './App.css';
-import { useState, useEffect } from 'react';
-import NavbarComponent from '../Components/NavbarComponent';
-import Routes from '../Components/Routes';
-import FooterComponent from '../Components/FooterComponent';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { getBlobs, getStrings, getTasks } from '../Service/Service';
 import AppContext from "../Components/context";
+const NavbarComponent = lazy(() => import('../Components/NavbarComponent'));
+const FooterComponent = lazy(() => import('../Components/FooterComponent'));
+const Routes = lazy(() => import('../Components/Routes'));
 
 function App() {
   const initialTask = (sessionStorage.getItem('tasks') !== null) ? JSON.parse(sessionStorage.getItem('tasks')) : [];
@@ -48,7 +48,7 @@ function App() {
   //GET TASKS
   useEffect(() => {
     if (Loading) {
-      console.log("Tasks length: "+tasks?.length);
+      console.log("Tasks length: " + tasks?.length);
       getTasks(1, 1).then(Tasks => {
         // console.log(tasks?.tasks);
         setTasks(Tasks?.tasks);
@@ -83,9 +83,11 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={value}>
-        <NavbarComponent />
-        <Routes />
-        <FooterComponent />
+        <Suspense fallback={<div>Loading...</div>}>
+          <NavbarComponent />
+          <Routes />
+          <FooterComponent />
+        </Suspense>
       </AppContext.Provider>
     </div>
   )

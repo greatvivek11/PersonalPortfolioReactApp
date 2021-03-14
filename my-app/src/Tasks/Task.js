@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { Trash } from 'react-bootstrap-icons';
 import Editable from "../Components/Editable.js";
+import '../styles/Task.css';
 
 function Task(props) {
     const element = props.element;
@@ -29,7 +30,7 @@ function Task(props) {
     return (
         <tr>
             <td className="td">
-                <li key={index}>
+                <ul key={index} >
                     <OverlayTrigger placement="top" overlay={tooltip}>
                         <Editable
                             text={element?.task}
@@ -48,10 +49,10 @@ function Task(props) {
                             />
                         </Editable>
                     </OverlayTrigger>
-                </li>
+                </ul>
             </td>
             <td className="td">
-                <Button type="button" name="delete" style={{ marginLeft: '0.5rem', margin: '0.5rem', backgroundColor: 'red', borderColor: 'red' }} onClick={e => onDelete(index)}>
+                <Button type="delete" name="delete" style={{ marginLeft: '0.5rem', margin: '0.5rem', backgroundColor: 'red', borderColor: 'red' }} onClick={e => onDelete(index)}>
                     <Trash></Trash></Button>
             </td>
         </tr>

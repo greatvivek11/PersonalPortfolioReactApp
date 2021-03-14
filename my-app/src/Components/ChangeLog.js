@@ -6,7 +6,7 @@ function ChangeLog() {
     const { strings } = useContext(AppContext);
 
     return (
-        <div>
+        <div className="ChangeLog">
             <h1>Change Log</h1>
             <ol className="changeLogs" type="1">
                 {strings?.ChangeLog?.map(
