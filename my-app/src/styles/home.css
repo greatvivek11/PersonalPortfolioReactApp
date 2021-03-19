@@ -19,7 +19,7 @@ h1{
             -webkit-background-clip: text;
 }
 p{
-  font-size: 1.25vmax;
+  font-size: 1.5vmax;
   text-align: left;
   padding: 5pt;
   margin: 0pc;
@@ -32,6 +32,6 @@ a{
   color:blue
 }
 #home_title{
-  padding: 1pc;
+  padding: 0pc;
   margin: 0pc;
 }

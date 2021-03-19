@@ -1,13 +1,8 @@
-#top-navbar{
-  display: flex;
-  flex-direction: row;
+#navbar{
   height: auto;
   width: 100%;
-  justify-content: space-between;
-  background-color: gray;
 }
 #navbar-brand{
-  justify-self: center;
   background: linear-gradient(to right, #f32170, 
                     #1c0cad);
                     background-clip: text;
@@ -16,11 +11,13 @@
   font-size: 2.5vmax;
 }
 #home,#about,#blog,#projects{
-  color: black;
-  font-size: 1.25vmax;
+  color: purple;
+  font-size: 1.5vmax;
 }
 #home:hover,#about:hover,#blog:hover,#projects:hover{
-  font-size: 1.5vmax;
+  font-size: 1.65vmax;
   color: gold;
-  background-color: black;
+  background-color: rgb(199, 89, 157);
+  border-radius: 20pt;
 }
+

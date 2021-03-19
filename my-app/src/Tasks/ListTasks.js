@@ -34,17 +34,13 @@ function ListTasks(props) {
     }
 
     return (
-        <div className="ListTasks">
-            <table className="responsive-table">
-                <tbody>
-                    {Tasks?.map((element, index) => {
-                        // console.log(element?.task);
-                        return(
-                            <Task key={index} element={element} index={index} onDelete={onDelete} onEdit={onEdit} pushTasks={pushTasks} />
-                        )
-                    })}
-                </tbody>
-            </table>
+        <div className="ListTasks container">
+            {Tasks?.map((element, index) => {
+                // console.log(element?.task);
+                return (
+                    <Task className="task" key={index} element={element} index={index} onDelete={onDelete} onEdit={onEdit} pushTasks={pushTasks} />
+                )
+            })}
         </div>
     )
 }

@@ -28,7 +28,7 @@ export default function Home() {
     return (
         <div className="Home">
             <div className="parent">
-                <Image className="Image" src={mypic} srcSet={mypicSm+' 480w,'+mypic+' 1080w'} sizes="50vw" height="10rem" width="15rem" alt="Vivek Kaushik pic" />
+                <Image className="Image" src={mypic} srcSet={mypicSm+' 480w,'+mypic+' 1080w'} sizes="100vw" height="10rem" width="15rem" alt="Vivek Kaushik pic" />
                 <div className="headline">
                     <h1 id="home_title">
                         Fullstack Software Developer

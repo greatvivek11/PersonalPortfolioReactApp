@@ -1,15 +1,16 @@
 .myCoverPic{
-    height: 70% !important;
-    width: 70% !important;
-}
-.Carousel{
-    background-color: black;
+    height: 70% ;
+    width: 70% ;
 }
 #caption h2{
+    font-size: 1.25vmax;
     color: yellow;
 }
 #caption p{
-    font-size: 14pt;
+    font-size: 1vmax;
     color: lightgreen;
     text-align: center;
+}
+.carousel{
+    margin: 10pt 0;
 }

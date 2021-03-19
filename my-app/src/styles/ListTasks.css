@@ -1,5 +1,3 @@
-table{
-    margin-right: auto;
-    margin-left: auto;
-    overflow-x: auto;
+.task{
+    justify-content: center;
 }

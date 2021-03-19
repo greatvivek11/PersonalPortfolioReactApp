@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { updateTasks } from '../Service/Service';
 import { Button } from 'react-bootstrap';
+import "../styles/AddTasks.css";
 
 export default function AddTasks(props) {
     const [Tasks, setTasks] = useState();
@@ -18,13 +19,16 @@ export default function AddTasks(props) {
     function onInputChange(e){
         // console.log(e.target.value);
         var newTask = e.target.value;
-        if(newTask!==""){
+        if(validateInputTasks(newTask)){
             setTasks(props?.tasks.concat({task:newTask}));
             setTaskAdded(true);    
         }else{
             setTaskAdded(false);
         }
         
+    }
+    function validateInputTasks(text) {
+        return (text.length > 0 && text.length < 64);
     }
     function onSubmit(e){
         e.preventDefault();
@@ -36,8 +40,8 @@ export default function AddTasks(props) {
         <div>
             <form onSubmit={onSubmit}>
             <label>Add Task:</label>
-            <input style={{marginLeft: '0.5rem',margin:'0.5rem'}} type ="text" name="addTask" placeholder="Add a Task" onChange={onInputChange}></input>
-            <Button type="submit"style={{marginLeft: '0.5rem',margin:'0.5rem',backgroundColor:'green'}} name="addTask" onClick={onClickAddTask}>Add Task</Button>
+            <input className="input" type ="text" name="addTask" placeholder="Add a Task" onChange={onInputChange}></input>
+            <Button className="submitBtn" type="submit" name="addTask" onClick={onClickAddTask}>Add Task</Button>
             </form>
         </div>
     )

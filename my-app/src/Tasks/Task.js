@@ -28,34 +28,29 @@ function Task(props) {
     );
 
     return (
-        <tr>
-            <td className="td">
-                <ul key={index} >
-                    <OverlayTrigger placement="top" overlay={tooltip}>
-                        <Editable
-                            text={element?.task}
-                            placeholder="Write a task name"
-                            childRef={inputRef}
-                            type="input"
-                            style={{ color: "black" }}
-                        >
-                            <input
-                                type="text"
-                                ref={inputRef}
-                                name="task"
-                                placeholder={element?.task}
-                                onChange={e => onEdit(e.target.value, index)}
-                                onKeyDown={e => pushTasks(e)}
-                            />
-                        </Editable>
-                    </OverlayTrigger>
-                </ul>
-            </td>
-            <td className="td">
-                <Button type="delete" name="delete" style={{ marginLeft: '0.5rem', margin: '0.5rem', backgroundColor: 'red', borderColor: 'red' }} onClick={e => onDelete(index)}>
-                    <Trash></Trash></Button>
-            </td>
-        </tr>
+        <div className="task">
+            <ul key={index} >
+                <OverlayTrigger placement="top" overlay={tooltip}>
+                    <Editable
+                        text={element?.task}
+                        placeholder="Write a task name"
+                        childRef={inputRef}
+                        type="input"
+                        style={{ color: "black" }}
+                    >
+                        <input
+                            type="text"
+                            ref={inputRef}
+                            name="task"
+                            placeholder={element?.task}
+                            onChange={e => onEdit(e.target.value, index)}
+                            onKeyDown={e => pushTasks(e)}
+                        />
+                    </Editable>
+                </OverlayTrigger>
+            </ul>
+            <Button className="delete" type="delete" name="delete" onClick={e => onDelete(index)}><Trash /></Button>
+        </div>
     )
 }
 
