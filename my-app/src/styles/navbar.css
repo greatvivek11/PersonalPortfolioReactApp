@@ -1,20 +1,26 @@
 #top-navbar{
   display: flex;
   flex-direction: row;
+  height: auto;
+  width: 100%;
   justify-content: space-between;
   background-color: gray;
 }
 #navbar-brand{
   justify-self: center;
-  color: white;
-  font-size: 20pt;
+  background: linear-gradient(to right, #f32170, 
+                    #1c0cad);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text;
+  font-size: 2.5vmax;
 }
 #home,#about,#blog,#projects{
   color: black;
-  font-size: 14pt;
+  font-size: 1.25vmax;
 }
 #home:hover,#about:hover,#blog:hover,#projects:hover{
-  size: 16pt;
+  font-size: 1.5vmax;
   color: gold;
   background-color: black;
 }

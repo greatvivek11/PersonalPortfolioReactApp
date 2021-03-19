@@ -1,12 +1,17 @@
 .card{
-    margin: 10pt;
     height: auto;
     width: auto;
+    margin: 10pt;
     border-radius: 10pt;
     float: left;
 }
 .cardImg{
-    height: auto;
-    width: 10rem;
-    align-content: center;
+    height: 11vmax;
+    width: 11vmax;
+}
+.cardTitle{
+    font-size: 1.25vmax;
+}
+.cardBody{
+    padding: 10px;
 }
