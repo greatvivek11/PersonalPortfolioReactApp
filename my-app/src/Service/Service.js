@@ -17,10 +17,10 @@ export async function getBlobs() {
     .then(res => res.json(res));
 }
 
-export async function getStrings(link) {
-    console.log("fetchings strings.txt from blob storage")
-    return await fetch(link)
-    .then(res => res.json(res))
+export async function getChangeLogs(id,pk) {
+    console.log("fetchings changeLogs from cosmosDB")
+    return await fetch(url+`/api/getChangeLogs?id=${id}&partitionKeyValue=${pk}`)
+    .then(res => res.json(res));
 
 }
 

@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect, lazy, Suspense } from 'react';
-import { getBlobs, getStrings, getTasks } from '../Service/Service';
+import { getChangeLogs, getTasks } from '../Service/Service';
 import AppContext from "../Components/context";
 const NavbarComponent = lazy(() => import('../Components/NavbarComponent'));
 const FooterComponent = lazy(() => import('../Components/FooterComponent'));
@@ -8,42 +8,36 @@ const Routes = lazy(() => import('../Components/Routes'));
 
 function App() {
   const initialTask = (sessionStorage.getItem('tasks') !== null) ? JSON.parse(sessionStorage.getItem('tasks')) : [];
-  const initialResources = (sessionStorage.getItem('images') !== null) ? JSON.parse(sessionStorage.getItem('images')) : [];
-  const initialStrings = (sessionStorage.getItem('strings') !== null) ? JSON.parse(sessionStorage.getItem('strings')) : {};
+  // const initialResources = (sessionStorage.getItem('images') !== null) ? JSON.parse(sessionStorage.getItem('images')) : [];
+  const initialChangeLogs = (sessionStorage.getItem('ChangeLogs') !== null) ? JSON.parse(sessionStorage.getItem('ChangeLogs')) : {};
   const [tasks, setTasks] = useState(initialTask);
-  const [resources, setResources] = useState(initialResources);
-  const [strings, setStrings] = useState(initialStrings);
+  // const [resources, setResources] = useState(initialResources);
+  const [ChangeLogs, setChangeLogs] = useState(initialChangeLogs);
   const [Loading, setLoading] = useState(false);
   const [TaskUpdated, setTaskUpdated] = useState(false);
-  var value = { resources, strings, tasks, setTasks, setTaskUpdated };
+  var value = { ChangeLogs, tasks, setTasks, setTaskUpdated };
 
   // console.log(tasks);
 
   // Set Loading to True if no data is present in local storage
   useEffect(() => {
     // console.log(initialTask);
-    if (Object.keys(initialStrings).length === 0 || initialTask?.length === 0 || initialResources?.length === 0) {
+    if (Object.keys(initialChangeLogs).length === 0 || initialTask?.length === 0) {
       setLoading(true);
     }
   }, [])
 
-  // //Callback from Context API's - Add, Edit, Delete Tasks
-  // function setStoreTasks(Tasks) {
-  //   console.log("Updating Tasks and storing in Session storage.");
-  //   setTaskUpdated(true);
-  // }
-
-  //GET RESOURCES/IMAGES
-  useEffect(() => {
-    if (Loading) {
-      console.log("Calling resources...")
-      getBlobs().then(res => {
-        setResources(res);
-        sessionStorage.setItem('images', JSON.stringify(res));
-      })
-      // console.log(resources);
-    }
-  }, [Loading]);
+  // //GET RESOURCES/IMAGES
+  // useEffect(() => {
+  //   if (Loading) {
+  //     console.log("Calling resources...")
+  //     getBlobs().then(res => {
+  //       setResources(res);
+  //       sessionStorage.setItem('images', JSON.stringify(res));
+  //     })
+  //     // console.log(resources);
+  //   }
+  // }, [Loading]);
 
   //GET TASKS
   useEffect(() => {
@@ -67,16 +61,16 @@ function App() {
     }
   }, [TaskUpdated])
 
-  //GET CHANGELOG STRINGS
+  //GET CHANGELOG ChangeLogs
   useEffect(() => {
     if (Loading) {
       // console.log(resources[10]);
-      getStrings(resources[10]).then(res => {
-        setStrings(res);
-        sessionStorage.setItem('strings', JSON.stringify(res));
+      getChangeLogs(2,2).then(res => {
+        setChangeLogs(res);
+        sessionStorage.setItem('ChangeLogs', JSON.stringify(res));
       }
       );
-      // console.log(Strings);
+      // console.log(ChangeLogs);
     }
   }, [Loading])
 
