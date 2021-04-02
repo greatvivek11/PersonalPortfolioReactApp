@@ -3,21 +3,30 @@
   width: 100%;
 }
 #navbar-brand{
+  align-self: center;
   background: linear-gradient(to right, #f32170, 
                     #1c0cad);
                     background-clip: text;
                     -webkit-text-fill-color: transparent; 
             -webkit-background-clip: text;
-  font-size: 2.5vmax;
+  font-size: 2rem;
 }
 #home,#about,#blog,#projects{
   color: purple;
-  font-size: 1.5vmax;
+  font-size: 1.25rem;
 }
 #home:hover,#about:hover,#blog:hover,#projects:hover{
-  font-size: 1.65vmax;
+  font-size: 1.5rem;
   color: gold;
   background-color: rgb(199, 89, 157);
   border-radius: 20pt;
+}
+@media screen and (max-width: 480px) {
+  #home,#about,#blog,#projects{
+    font-size: 1rem;
+  }
+  #home:hover,#about:hover,#blog:hover,#projects:hover{
+    font-size: 1.25rem;
+  }
 }
 

@@ -4,25 +4,24 @@
   align-items: center;
   justify-content: center;
 }
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media screen and (max-width: 800px) {
+  .parent {
+    flex-direction: column;
+  }
+}
+
 .Image{
   height: auto;
-  width: 50%;
+  width: 40vmax;
   padding: 5pt;
   float: left;
-}
-h1{
-  font-size: 3vmax;
-  background: linear-gradient(to right, #f32170, 
-                    #ff6b08, #cf23cf, #eedd44);
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent; 
-            -webkit-background-clip: text;
-}
+} 
+
 p{
-  font-size: 1.5vmax;
   text-align: left;
-  padding: 5pt;
-  margin: 0pc;
+  padding: 5pt 0;
+  margin: 0 20pt;
 }
 .skillCards{
   display: inline-block;

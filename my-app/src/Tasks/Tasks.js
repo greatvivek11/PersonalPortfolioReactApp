@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { lazy, Suspense } from 'react';
 import AppContext from "../Components/context";
-import '../styles/Tasks.css';
 const ListTasks = lazy(() => import('../Tasks/ListTasks'));
 const AddTasks = lazy(() => import('../Tasks/AddTasks'));
 

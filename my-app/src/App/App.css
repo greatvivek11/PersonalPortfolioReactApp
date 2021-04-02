@@ -15,6 +15,18 @@ html {
   }
 }
 
+@media screen and (max-width: 480px) {
+  h1{
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 1.25rem;
+  }
+  p{
+    font-size: 0.75rem;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,4 +49,12 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+h1{
+  background: linear-gradient(to right, #f32170, 
+                    #ff6b08, #cf23cf, #eedd44);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text;
 }

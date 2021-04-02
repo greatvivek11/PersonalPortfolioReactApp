@@ -28,7 +28,7 @@ export default function Home() {
     return (
         <div className="Home">
             <div className="parent">
-                <Image className="Image" src={mypic} srcSet={mypicSm+' 480w,'+mypic+' 1080w'} sizes="100vw" height="10rem" width="15rem" alt="Vivek Kaushik pic" />
+                <Image className="Image" src={mypic} srcSet={mypicSm + ' 480w,' + mypic + ' 1080w'} sizes="auto" height="auto" width="auto" alt="Vivek Kaushik pic" />
                 <div className="headline">
                     <h1 id="home_title">
                         Fullstack Software Developer
@@ -39,21 +39,19 @@ export default function Home() {
             <p>{Headline2}</p>
             <p>{Headline3}</p>
             <p>{Headline4}</p>
-            <h1>Skills</h1>
             <Container className="skillCards">
+                <h1>Skills</h1>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <CardComponent image={reactPic} imageSm={reactPicSm}  title="React" text="Learning and Exploring React." />
-                    <CardComponent image={azurePic} imageSm={azurePicSm}  title="Azure" text="Learning and Exploring Azure." />
-                    <CardComponent image={angularPic} imageSm={angularPicSm}   title="Angular" text="Learning and Exploring Angular." />
-                    <CardComponent image={javaPic} imageSm={javaPicSm}   title="Java" text="Learning and Exploring Java." />
-                    <CardComponent image={cPic} imageSm={cPicSm}   title="C#" text="Learning and Exploring C#." />
+                    <CardComponent image={reactPic} imageSm={reactPicSm} title="React" text="Learning and Exploring React." />
+                    <CardComponent image={azurePic} imageSm={azurePicSm} title="Azure" text="Learning and Exploring Azure." />
+                    <CardComponent image={angularPic} imageSm={angularPicSm} title="Angular" text="Learning and Exploring Angular." />
+                    <CardComponent image={javaPic} imageSm={javaPicSm} title="Java" text="Learning and Exploring Java." />
+                    <CardComponent image={cPic} imageSm={cPicSm} title="C#" text="Learning and Exploring C#." />
                     <CardComponent image={androidPic} imageSm={androidPicSm} title="Android" text="Learning and Exploring Android." />
-                    <CardComponent image={mysqlPic} imageSm={mysqlPicSm}   title="MySQL" text="Learning and Exploring MySQL." />
-                    <CardComponent image={iotPic} imageSm={iotPicSm}   title="IoT" text="Learning and Exploring IoT." />
+                    <CardComponent image={mysqlPic} imageSm={mysqlPicSm} title="MySQL" text="Learning and Exploring MySQL." />
+                    <CardComponent image={iotPic} imageSm={iotPicSm} title="IoT" text="Learning and Exploring IoT." />
                 </Suspense>
             </Container>
-
-
             <p>Add tasks for me: <a href="/tasks">Tasks</a> </p>
             <p>You can find all the features which I have added to my website here: <a href="/changeLog">Features Added</a> </p>
             <p>This website is a Work-in-Progress. Please don't mind the basic UI.</p>

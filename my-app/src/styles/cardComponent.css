@@ -6,12 +6,21 @@
     float: left;
 }
 .cardImg{
-    height: 11vmax;
-    width: 11vmax;
+    height: 10pc;
+    width: 10pc;
 }
 .cardTitle{
-    font-size: 1.5vmax;
+    font-size: 1rem;
 }
 .cardBody{
     padding: 10px;
 }
+@media screen and (max-width: 480px) {
+    .cardTitle{
+      font-size: 0.75rem;
+    }
+    .cardImg{
+        height: 5pc;
+        width: 5pc;
+    }
+  }
