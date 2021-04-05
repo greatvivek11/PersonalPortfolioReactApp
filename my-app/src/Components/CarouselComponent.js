@@ -36,7 +36,7 @@ export default function CarouselComponent() {
                                 alt="First slide"
                             />
                             <Carousel.Caption id="caption">
-                                <h2>{coverProp[i].title}</h2>
+                                <h3>{coverProp[i].title}</h3>
                                 <p>{coverProp[i].subtitle}</p>
                             </Carousel.Caption>
                         </Carousel.Item>

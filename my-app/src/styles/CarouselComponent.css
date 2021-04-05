@@ -1,13 +1,17 @@
 .myCoverPic{
-    height: 70% ;
-    width: 70% ;
+    height: 50% ;
+    width: 50% ;
 }
-#caption h2{
-    font-size: 1.25vmax;
+@media screen and (max-width: 480px) {
+    .myCoverPic{
+        height: 70% ;
+        width: 70% ;
+    }
+}
+#caption h3{
     color: yellow;
 }
 #caption p{
-    font-size: 1vmax;
     color: lightgreen;
     text-align: center;
 }

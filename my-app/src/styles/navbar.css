@@ -16,9 +16,10 @@
   font-size: 1.25rem;
 }
 #home:hover,#about:hover,#blog:hover,#projects:hover{
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  transform: scale(1.15);
   color: gold;
-  background-color: rgb(199, 89, 157);
+  background-color: rgb(185, 87, 223);
   border-radius: 20pt;
 }
 @media screen and (max-width: 480px) {

@@ -1,0 +1,26 @@
+#header{
+    background: linear-gradient(to right,skyblue,rgb(53, 75, 197));
+    border-radius: 50pt;
+    border-color: transparent;
+    margin: 10pt;
+    
+}
+#card{
+    background:transparent;
+    border: none;
+}
+#body{
+    padding: 0;
+    margin: 10pt;
+}
+p{
+    margin: 0 10pt;
+}
+@media screen and (max-width: 480px) {
+    #body{
+        font-size: 0.75rem;
+    }
+    #header{
+        font-size: 1rem;
+    }
+}

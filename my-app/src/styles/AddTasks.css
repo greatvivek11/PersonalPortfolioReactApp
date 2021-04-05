@@ -4,4 +4,19 @@
 .submitBtn{
     background-color: green;
     size: 1vmax;
+    border-color: none;
 }
+label{
+    font-size: 1rem;
+}
+@media screen and (max-width: 480px) {
+    label{
+        font-size: 0.75rem;
+    }
+    .input{
+        font-size: 0.75rem;
+    }
+    .submitBtn{
+        font-size: 0.75rem;
+    }
+    }

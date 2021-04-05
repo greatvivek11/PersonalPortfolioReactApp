@@ -5,7 +5,6 @@
     width: 100%;
     font-size: 1rem;
     justify-content: center;
-    background-color: grey;
     color: black;
 }
 .Nav{
@@ -19,6 +18,9 @@
 }
 #email,#github,#linkedin{
     color: black ;
+}
+#email:hover,#github:hover,#linkedin:hover{
+    transform: scale(1.5);
 }
 .brand{
     font-size: 1rem;

@@ -1,13 +1,16 @@
-import '../styles/tbd.css';
-import image from '../Assets/resources/construction.jpg'
+import { Container } from 'react-bootstrap';
+import AccordianComponent from './AccordianComponent';
+import { Project1,Project2,Project3,Project4,Project5} from "./strings";
 
 export default function Projects() {
+    const dict = {"Personal Portfolio Project":Project1,"Boston Scientific C#/Java Project":Project2,"Epredia Cloud/IoT Project":Project3,"Epredia Android Project":Project4,"PGI Java/MySQL Project":Project5}
+    const style = {"color1":"hotpink","color2":"pink"};
     return (
         <div className="UnderConstruction">
-            <h1>Projects Section</h1>
-            <h2>Work in Progress!</h2>
-            <p>Hi! This is going to be my projects section. I'm going to add my Professional and Personal Projects details here.</p>
-            <img className="image" src={image} ></img>
+            <h1>Projects</h1>
+            <Container>
+                <AccordianComponent props={dict} styles={style} />
+            </Container>
         </div>
     )
 }

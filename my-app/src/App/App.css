@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   align-items: center;
-  background-color: lavender;
+  background-color: lavenderblush;
 }
 
 html {
@@ -21,6 +21,9 @@ html {
   }
   h2{
     font-size: 1.25rem;
+  }
+  h3{
+    font-size: 1rem;
   }
   p{
     font-size: 0.75rem;
@@ -57,4 +60,10 @@ h1{
                     background-clip: text;
                     -webkit-text-fill-color: transparent; 
             -webkit-background-clip: text;
+}
+h3{
+color: royalblue;
+}
+p{
+  /* padding: 10pt; */
 }

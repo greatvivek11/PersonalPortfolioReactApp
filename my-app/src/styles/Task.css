@@ -6,9 +6,18 @@
     vertical-align: middle;
 }
 ul{
-    margin: 0%;
+    margin: 10pt 0;
     padding: 0%;
     text-align: center;
+    font-size: 1rem;
+}
+@media screen and (max-width: 480px) {
+    ul{
+        font-size: 0.75rem;
+    }
+    .delete{
+        font-size: 0.75rem;
+    }
 }
 .delete{
     margin: 5pt;
