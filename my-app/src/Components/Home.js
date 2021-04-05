@@ -22,6 +22,7 @@ import androidPicSm from '../Assets/small/android-sm.png';
 import mysqlPicSm from '../Assets/small/mysql-sm.png';
 import iotPicSm from '../Assets/small/iot-sm.png';
 import { Container } from 'react-bootstrap';
+import Typewriter from 'typewriter-effect';
 const CardComponent = lazy(() => import('../Components/CardComponent'));
 
 export default function Home() {
@@ -31,7 +32,13 @@ export default function Home() {
                 <Image className="Image" src={mypic} srcSet={mypicSm + ' 480w,' + mypic + ' 1080w'} sizes="auto" height="auto" width="auto" alt="Vivek Kaushik pic" />
                 <div className="headline">
                     <h1 id="home_title">
-                        Fullstack Software Developer
+                        <Typewriter 
+                        options={{
+                            strings: ['Fullstack Software Developer', 'Tech Enthusiast','Blogger','Thinker'],
+                            autoStart: true,
+                            loop: true,
+                          }}
+                        />
                     </h1>
                     <p>{Headline1}</p>
                 </div>
