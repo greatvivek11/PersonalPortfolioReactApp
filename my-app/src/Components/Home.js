@@ -2,7 +2,7 @@
 import '../styles/home.css';
 import { lazy, Suspense } from 'react';
 import Image from 'react-bootstrap/Image';
-import { Headline1, Headline2, Headline3, Headline4 } from '../Components/strings';
+import { Headline1, Headline2, Headline3, Headline4, Headline5, Headline6, Headline7 } from '../Components/strings';
 import mypic from '../Assets/large/myPic.jpg';
 import mypicSm from '../Assets/small/myPic-sm.jpg';
 import reactPic from '../Assets/large/react-logo.png';
@@ -21,6 +21,10 @@ import cPicSm from '../Assets/small/c-sm.png';
 import androidPicSm from '../Assets/small/android-sm.png';
 import mysqlPicSm from '../Assets/small/mysql-sm.png';
 import iotPicSm from '../Assets/small/iot-sm.png';
+import azDevLg from '../Assets/large/azure-developer-associate-240x240.png';
+import azFunLg from '../Assets/large/azure-fundamentals-240x240.png';
+import azDevSm from '../Assets/small/azure-developer-associate-132x132.png';
+import azFunSm from '../Assets/small/azure-fundamentals-132x132.png';
 import { Container } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 const CardComponent = lazy(() => import('../Components/CardComponent'));
@@ -32,21 +36,28 @@ export default function Home() {
                 <Image className="Image" src={mypic} srcSet={mypicSm + ' 480w,' + mypic + ' 1080w'} sizes="auto" height="auto" width="auto" alt="Vivek Kaushik pic" />
                 <div className="headline">
                     <h1 id="home_title">
-                        <Typewriter 
-                        options={{
-                            strings: ['Fullstack Software Developer', 'Tech Enthusiast','Blogger','Thinker'],
-                            autoStart: true,
-                            loop: true,
-                          }}
+                        <Typewriter
+                            options={{
+                                strings: ['Microsoft Certified Azure Developer', 'Full Stack Software Developer', 'Tech Enthusiast', 'Blogger', 'Writer', 'Thinker'],
+                                autoStart: true,
+                                loop: true,
+                            }}
                         />
                     </h1>
                     <p>{Headline1}</p>
+                    <Image className="badgeImage" src={azDevLg} srcSet={azDevSm + ' 480w,' + azDevLg + ' 1080w'} sizes="auto" height="auto" width="auto" alt="AZ 204 badge" />
+                    <Image className="badgeImage" src={azFunLg} srcSet={azFunSm + ' 480w,' + azFunLg + ' 1080w'} sizes="auto" height="auto" width="auto" alt="AZ 900 badge" />
                 </div>
             </div>
-            <p>{Headline2}</p>
-            <p>{Headline3}</p>
-            <p>{Headline4}</p>
             <Container className="skillCards">
+                <div className="lists">
+                    <li>{Headline2}</li>
+                    <li>{Headline3}</li>
+                    <li>{Headline4}</li>
+                    <li>{Headline5}</li>
+                    <li>{Headline6}</li>
+                    <li>{Headline7}</li>
+                </div>
                 <h1>Skills</h1>
                 <Suspense fallback={<div>Loading...</div>}>
                     <CardComponent image={reactPic} imageSm={reactPicSm} title="React" text="Learning and Exploring React." />

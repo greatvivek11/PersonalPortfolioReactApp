@@ -28,6 +28,9 @@ html {
   p{
     font-size: 0.75rem;
   }
+  li{
+    font-size: 0.75rem;
+  }
 }
 
 .App-header {
@@ -63,7 +66,4 @@ h1{
 }
 h3{
 color: royalblue;
-}
-p{
-  /* padding: 10pt; */
 }
