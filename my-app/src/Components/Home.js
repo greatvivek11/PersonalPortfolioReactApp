@@ -45,8 +45,12 @@ export default function Home() {
                         />
                     </h1>
                     <p>{Headline1}</p>
-                    <Image className="badgeImage" src={azDevLg} srcSet={azDevSm + ' 480w,' + azDevLg + ' 1080w'} sizes="auto" height="auto" width="auto" alt="AZ 204 badge" />
-                    <Image className="badgeImage" src={azFunLg} srcSet={azFunSm + ' 480w,' + azFunLg + ' 1080w'} sizes="auto" height="auto" width="auto" alt="AZ 900 badge" />
+                    <a href="https://www.credly.com/badges/287ccc6b-a5fa-4253-a970-14ed19efb012/public_url" rel="noopener" target="_blank">
+                        <Image className="badgeImage" src={azDevLg} height="auto" width="auto" alt="AZ 204 badge" />
+                    </a>
+                    <a href="https://www.credly.com/badges/11fa2238-d5a2-4a6a-bffd-1d428803db9b/public_url" target="_blank" rel="noopener">
+                        <Image className="badgeImage" src={azFunLg} height="auto" width="auto" alt="AZ 900 badge" />
+                    </a>
                 </div>
             </div>
             <Container className="skillCards">
