@@ -23,8 +23,7 @@ import mysqlPicSm from '../Assets/small/mysql-sm.png';
 import iotPicSm from '../Assets/small/iot-sm.png';
 import azDevLg from '../Assets/large/azure-developer-associate-240x240.png';
 import azFunLg from '../Assets/large/azure-fundamentals-240x240.png';
-import azDevSm from '../Assets/small/azure-developer-associate-132x132.png';
-import azFunSm from '../Assets/small/azure-fundamentals-132x132.png';
+import azIotLg from '../Assets/large/azure-iot-speciality-240x240.png';
 import { Container } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 const CardComponent = lazy(() => import('../Components/CardComponent'));
@@ -38,19 +37,25 @@ export default function Home() {
                     <h1 id="home_title">
                         <Typewriter
                             options={{
-                                strings: ['Microsoft Certified Azure Developer', 'Full Stack Software Developer', 'Tech Enthusiast', 'Blogger', 'Writer', 'Thinker'],
+                                strings: ['Microsoft Certified Azure Developer','Microsoft Certified Azure IoT Specialist', 'Full Stack Software Developer', 'Tech Enthusiast', 'Blogger', 'Writer', 'Thinker'],
                                 autoStart: true,
                                 loop: true,
                             }}
                         />
                     </h1>
                     <p>{Headline1}</p>
+                    <Container>
+
                     <a href="https://www.credly.com/badges/287ccc6b-a5fa-4253-a970-14ed19efb012/public_url" rel="noopener" target="_blank">
                         <Image className="badgeImage" src={azDevLg} height="auto" width="auto" alt="AZ 204 badge" />
+                    </a>
+                    <a href="https://www.credly.com/badges/6b136cb8-d3f4-4142-b6bc-d9846a5bf69d/public_url" rel="noopener" target="_blank">
+                        <Image className="badgeImage" src={azIotLg} height="auto" width="auto" alt="AZ 220 badge" />
                     </a>
                     <a href="https://www.credly.com/badges/11fa2238-d5a2-4a6a-bffd-1d428803db9b/public_url" target="_blank" rel="noopener">
                         <Image className="badgeImage" src={azFunLg} height="auto" width="auto" alt="AZ 900 badge" />
                     </a>
+                    </Container>
                 </div>
             </div>
             <Container className="skillCards">

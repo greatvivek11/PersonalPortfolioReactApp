@@ -21,7 +21,7 @@ useEffect(() => {
 });
     return (
         <div id="progressBarContainer">
-            <div id="progressBar" style={{ transform: `scale(${scroll}, 1)`, opacity: `${scroll}` }} />
+            <div id="progressBar" style={{ transform: `scale(${scroll}, 1)`, opacity: 100 }} />
         </div>
     )
 }

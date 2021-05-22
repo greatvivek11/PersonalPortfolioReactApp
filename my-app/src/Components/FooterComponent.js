@@ -9,7 +9,7 @@ export default function FooterComponent() {
                     <Nav className="Nav" fill="true">
                         <Navbar.Brand className="brand">Connect with me @</Navbar.Brand>
                         <Nav.Item className="NavItem">
-                            <Nav.Link rel="noopener" id="email" href="Email:vcoolkaushik@gmail.com" target="_blank"><Envelope className="btLogo" color="black"></Envelope> Email</Nav.Link>
+                            <Nav.Link rel="noopener" id="email" href="mailto:vcoolkaushik@gmail.com" target="_blank"><Envelope className="btLogo" color="black"></Envelope> Email</Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="NavItem">
                             <Nav.Link rel="noopener" id="github" href="https://github.com/greatvivek11/PersonalPortfolioReactApp" target="_blank" ><Github className="btLogo" color="black"></Github> Github</Nav.Link>
