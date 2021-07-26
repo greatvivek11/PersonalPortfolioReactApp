@@ -1,19 +1,24 @@
 #navbar{
   height: auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #navbar-brand{
-  align-self: center;
   background: linear-gradient(to right, #f32170, 
                     #1c0cad);
                     background-clip: text;
                     -webkit-text-fill-color: transparent; 
             -webkit-background-clip: text;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
 }
 #home,#about,#blog,#projects{
+  padding-left: 10pt;
+  padding-right: 10pt;
   color: purple;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 #home:hover,#about:hover,#blog:hover,#projects:hover{
   /* font-size: 1.5rem; */
@@ -23,11 +28,21 @@
   border-radius: 20pt;
 }
 @media screen and (max-width: 480px) {
+  #navbar{
+    display: inline-block;
+  }
+  #toggle{
+    float: right;
+  }
+  #navbar-brand{
+    padding-left: 30pt;
+    font-size: 1.75rem;
+  }
   #home,#about,#blog,#projects{
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   #home:hover,#about:hover,#blog:hover,#projects:hover{
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 

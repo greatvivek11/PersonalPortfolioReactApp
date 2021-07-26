@@ -6,15 +6,12 @@
     top: 0;
     left: 0;
 }
-  
-  
 #progressBar {
     background: linear-gradient(to right, red, violet);
     /* transform-origin: top left;
     transform: scale(0,0);
     opacity: 0; */
 }
-
 #progressBarContainer,
 #progressBar {
     height: 5px;
