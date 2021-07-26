@@ -40,7 +40,7 @@ export default function Home() {
                     <h1 id="home_title">
                         <Typewriter
                             options={{
-                                strings: ['Microsoft Certified Azure Developer', 'Microsoft Certified Azure IoT Specialist', 'Full Stack Software Developer', 'Tech Enthusiast', 'Blogger', 'Writer', 'Thinker'],
+                                strings: ['Microsoft Certified Azure Developer','Microsoft Certified Azure Data Engineer','Microsoft Certified Azure IoT Specialist', 'Full Stack Software Developer', 'Tech Enthusiast', 'Blogger', 'Writer', 'Thinker'],
                                 autoStart: true,
                                 loop: true,
                             }}

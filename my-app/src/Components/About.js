@@ -16,9 +16,7 @@ export default function About() {
                 <Container>
                     <AccordianComponent props={dict} styles={style} />
                 </Container>
-                <p>{About6}</p>
             </Suspense>
-
         </div>
     )
 }
