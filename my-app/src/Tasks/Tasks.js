@@ -7,7 +7,7 @@ const AddTasks = lazy(() => import('../Tasks/AddTasks'));
 
 function Tasks() {
     const { tasks, newTask, setNewTask, setTaskUpdated } = useContext(AppContext);
-    // console.log(tasks);
+    // console.log(tasks); 
 
     function handleTaskChange(newTasks) {
         // console.log(newTasks);

@@ -1,10 +1,10 @@
 import { Container } from 'react-bootstrap';
 import { lazy, Suspense } from 'react';
-import { Project1, Project2, Project3, Project4, Project5 } from "./strings";
+import { Project1, Project2, Project3, Project4, Project5, Project6 } from "./strings.jsx";
 const AccordianComponent = lazy(() => import('./AccordianComponent'));
 
 export default function Projects() {
-    const dict = { "Personal Portfolio Project": Project1, "Boston Scientific C#/Java Project": Project2, "Epredia Cloud/IoT Project": Project3, "Ascensia Android Project": Project4, "PGI Java/MySQL Project": Project5 }
+    const dict = {"ToDo App": Project6, "Personal Portfolio Project": Project1, "Boston Scientific C#/Java Project": Project2, "Epredia Cloud/IoT Project": Project3, "Ascensia Android Project": Project4, "PGI Java/MySQL Project": Project5 }
     const style = { "color1": "hotpink", "color2": "pink" };
     return (
         <div className="UnderConstruction">
