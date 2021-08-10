@@ -5,6 +5,7 @@
   flex-direction: column;
 }
 #navbar-brand{
+  font-family: 'Apple Chancery, cursive';
   background: linear-gradient(to right, #f32170, 
                     #1c0cad);
                     background-clip: text;
@@ -15,6 +16,7 @@
   padding: 0;
 }
 #home,#about,#blog,#projects{
+  font-family: 'Apple Chancery, cursive';
   padding-left: 10pt;
   padding-right: 10pt;
   color: purple;

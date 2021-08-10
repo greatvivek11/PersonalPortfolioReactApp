@@ -1,8 +1,7 @@
-
 import '../styles/home.css';
 import { lazy, Suspense } from 'react';
 import Image from 'react-bootstrap/Image';
-import { Headline1, Headline2, Headline3, Headline4, Headline5, Headline6, Headline7 } from '../Components/strings';
+import { Headline1, Headline2, Headline3, Headline4, Headline5 } from '../Components/strings.jsx';
 import mypic from '../Assets/large/myPic.jpg';
 import mypicSm from '../Assets/small/myPic-sm.jpg';
 import reactPic from '../Assets/large/react-logo.png';
@@ -21,11 +20,21 @@ import cPicSm from '../Assets/small/c-sm.png';
 import androidPicSm from '../Assets/small/android-sm.png';
 import mysqlPicSm from '../Assets/small/mysql-sm.png';
 import iotPicSm from '../Assets/small/iot-sm.png';
+import htmlSm from '../Assets/small/html_logo.png';
+import cssSm from '../Assets/small/css_logo.png';
+import bootstrapSm from '../Assets/small/bootstrap_logo.png';
+import twSm from '../Assets/small/tailwindcss_logo.png';
+import jsSm from '../Assets/small/js_logo.png';
 import azDevLg from '../Assets/large/azure-developer-associate-240x240.png';
 import azFunLg from '../Assets/large/azure-fundamentals-240x240.png';
 import azDataLg from '../Assets/large/azure-data-engineer-associate-600x600.png';
 import azDataFunLg from '../Assets/large/azure-data-fundamentals-240x240.png';
 import azIotLg from '../Assets/large/azure-iot-speciality-240x240.png';
+import htmlLg from '../Assets/large/html_logo.png';
+import cssLg from '../Assets/large/css_logo.png';
+import bootstrapLg from '../Assets/large/bootstrap_logo.png';
+import twLg from '../Assets/large/tailwindcss_logo.png';
+import jsLg from '../Assets/large/js_logo.png';
 import { Container } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 import { BadgeComponent } from '../Components/BadgeComponent';
@@ -61,9 +70,7 @@ export default function Home() {
                     <li>{Headline2}</li>
                     <li>{Headline3}</li>
                     <li>{Headline4}</li>
-                    <li>{Headline5}</li>
-                    <li>{Headline6}</li>
-                    <li>{Headline7}</li>
+                    <li>{Headline5}<a href="https://todo.vivekkaushik.in" target="_blank" rel="noreferrer">ToDoApp</a></li>
                 </div>
                 <h1>Skills</h1>
                 <Suspense fallback={<div>Loading...</div>}>
@@ -75,6 +82,11 @@ export default function Home() {
                     <CardComponent image={androidPic} imageSm={androidPicSm} title="Android" text="Learning and Exploring Android." />
                     <CardComponent image={mysqlPic} imageSm={mysqlPicSm} title="MySQL" text="Learning and Exploring MySQL." />
                     <CardComponent image={iotPic} imageSm={iotPicSm} title="IoT" text="Learning and Exploring IoT." />
+                    <CardComponent image={htmlLg} imageSm={htmlSm} title="HTML5" text="Learning and Exploring HTML5." />
+                    <CardComponent image={cssLg} imageSm={cssSm} title="CSS3" text="Learning and Exploring CSS3." />
+                    <CardComponent image={jsLg} imageSm={jsSm} title="JS" text="Learning and Exploring Javascript." />
+                    <CardComponent image={bootstrapLg} imageSm={bootstrapSm} title="Bootstrap" text="Learning and Exploring Bootstrap." />
+                    <CardComponent image={twLg} imageSm={twSm} title="TailwindCSS" text="Learning and Exploring TailwindCSS." />
                 </Suspense>
             </Container>
             <p>Add tasks for me: <a href="/tasks">Tasks</a> </p>

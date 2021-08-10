@@ -1,6 +1,6 @@
 .App {
+  min-height:100vh;
   text-align: center;
-  align-items: center;
   background-color: lavenderblush;
 }
 
@@ -58,6 +58,7 @@ html {
 }
 
 h1{
+  /* font-family: 'Apple Chancery, cursive'; */
   background: linear-gradient(to right, #f32170, 
                     #ff6b08, #cf23cf, #eedd44);
                     background-clip: text;

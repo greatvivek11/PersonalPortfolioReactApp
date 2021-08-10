@@ -1,8 +1,8 @@
-import {  Blog1,Blog2} from "./strings";
+import {  Blog1,Blog2} from "./strings.jsx";
 
 export default function Blog() {
     return (
-        <div className="UnderConstruction">
+        <div className="blog">
             <h1>Blogs</h1>
             <p>{Blog1}</p>
             <p>{Blog2}</p>

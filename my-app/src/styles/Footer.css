@@ -28,6 +28,9 @@
     margin: 0pc;
     font-weight: bold;
 }
+.footerCredit{
+    color: black;
+}
 @media screen and (max-width: 480px) {
     .brand{
         font-size: 0.75rem;
