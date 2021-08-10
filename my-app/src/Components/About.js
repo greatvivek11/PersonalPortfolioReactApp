@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 import { lazy, Suspense } from 'react';
-import { About1, About2, About3, About4, About5, About6, About7 } from "./strings.jsx";
+import { About1, About2, About3, About4, About5, About7 } from "./strings.jsx";
 const CarouselComponent = lazy(() => import('./CarouselComponent'));
 const AccordianComponent = lazy(() => import('./AccordianComponent'));
 

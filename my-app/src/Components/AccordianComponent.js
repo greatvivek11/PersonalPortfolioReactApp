@@ -3,9 +3,41 @@ import '../styles/accordianComponent.css';
 
 function AccordianComponent({ props, styles }) {
     var keys = Object.keys(props);
-    keys.forEach(e => {
-        console.log(props[e].link);
-    });
+
+    function returnCardBody(e) {
+        if (props[e].subtitle !== undefined && props[e].link !== undefined)
+            if (props[e].link === "#") {
+                return (
+                    <Card.Body id="body">
+                        <Card.Title>{props[e].title}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{props[e].subtitle}</Card.Subtitle>
+                        <Card.Text>
+                            {props[e].body}
+                        </Card.Text>
+                    </Card.Body>
+                )
+            } else {
+                return (
+                    <Card.Body id="body">
+                        <Card.Title>{props[e].title}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{props[e].subtitle}</Card.Subtitle>
+                        <Card.Text>
+                            {props[e].body}
+                        </Card.Text>
+                        <Card.Link href={props[e].link}>Link</Card.Link>
+                    </Card.Body>
+                )
+            }
+        else {
+            return (
+                <Card.Body id="body">
+                    <Card.Text>
+                        {props[e].body}
+                    </Card.Text>
+                </Card.Body>
+            )
+        }
+    }
     return (
         <Accordion id="accordian">
             {keys.map((e, i) => {
@@ -14,14 +46,7 @@ function AccordianComponent({ props, styles }) {
                         {e}
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey={i + 1}>
-                        <Card.Body id="body">
-                            <Card.Title>{e}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">{props[e].subtitle}</Card.Subtitle>
-                            <Card.Text>
-                                {props[e].body}
-                            </Card.Text>
-                        <Card.Link href={props[e].link}>Link</Card.Link>
-                        </Card.Body>
+                        {returnCardBody(e)}
                     </Accordion.Collapse>
                 </Card>
             }

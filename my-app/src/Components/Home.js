@@ -70,7 +70,7 @@ export default function Home() {
                     <li>{Headline2}</li>
                     <li>{Headline3}</li>
                     <li>{Headline4}</li>
-                    <li>{Headline5}<a href="https://todo.vivekkaushik.in" target="_blank">ToDoApp</a></li>
+                    <li>{Headline5}<a href="https://todo.vivekkaushik.in" target="_blank" rel="noreferrer">ToDoApp</a></li>
                 </div>
                 <h1>Skills</h1>
                 <Suspense fallback={<div>Loading...</div>}>

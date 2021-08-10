@@ -9,16 +9,16 @@ export default function FooterComponent() {
                     <Nav className="Nav" fill="true">
                         <Navbar.Brand className="brand">Connect with me @</Navbar.Brand>
                         <Nav.Item className="NavItem">
-                            <Nav.Link rel="noopener" id="email" href="mailto:vcoolkaushik@gmail.com" target="_blank"><Envelope className="btLogo" color="black"></Envelope> Email</Nav.Link>
+                            <Nav.Link rel="noopener" id="email" href="mailto:vcoolkaushik@gmail.com" target="_blank" rel="noreferrer"><Envelope className="btLogo" color="black"></Envelope> Email</Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="NavItem">
-                            <Nav.Link rel="noopener" id="github" href="https://github.com/greatvivek11/" target="_blank" ><Github className="btLogo" color="black"></Github> Github</Nav.Link>
+                            <Nav.Link rel="noopener" id="github" href="https://github.com/greatvivek11/" target="_blank" rel="noreferrer"><Github className="btLogo" color="black"></Github> Github</Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="NavItem">
-                            <Nav.Link rel="noopener" id="linkedin" href="https://www.linkedin.com/in/vivek-kaushik/" target="_blank"><Linkedin className="btLogo" color="#004085"></Linkedin> Linkedin</Nav.Link>
+                            <Nav.Link rel="noopener" id="linkedin" href="https://www.linkedin.com/in/vivek-kaushik/" target="_blank" rel="noreferrer"><Linkedin className="btLogo" color="#004085"></Linkedin> Linkedin</Nav.Link>
                         </Nav.Item>
                     </Nav>
-                    <a className="footerCredit" href="https://azure.microsoft.com/en-us/services/app-service/static/" target="_blank">Hosted on Azure Static Web Apps with ❤️</a>
+                    <a className="footerCredit" href="https://azure.microsoft.com/en-us/services/app-service/static/" target="_blank" rel="noreferrer">Hosted on Azure Static Web Apps with ❤️</a>
             </Navbar>
         </div>
     )
