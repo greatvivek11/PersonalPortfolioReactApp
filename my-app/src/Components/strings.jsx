@@ -1,4 +1,6 @@
-export const Headline1 = "Hi! I am a Full-Stack Software developer with 2.5+ years of experience in developing, testing and deploying web, mobile and cloud applications.";
+import {datediff,getTotalYears,parseDate} from './DateDiff';
+
+export const Headline1 = "Hi! I am a Full-Stack Software developer with "+ getTotalYears()+"+ years of experience in developing, testing and deploying web, mobile and cloud applications.";
 export const Headline2 = "This is my React based portfolio website to demonstrate recruiters my knowledge and understanding of various technologies such as React, Angular, Node, C# and Azure etc."
 export const Headline3 = "This website is hosted on Azure Static Web Apps with complete CI/CD using Github Actions."
 export const Headline4 = "I am exploring and learning various React features such as - Functional components, props, hooks, routes, bootstrap etc."

@@ -38,6 +38,7 @@ import jsLg from '../Assets/large/js_logo.png';
 import { Container } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 import { BadgeComponent } from '../Components/BadgeComponent';
+import { getTotalYears, method1 } from './DateDiff';
 const CardComponent = lazy(() => import('../Components/CardComponent'));
 
 export default function Home() {
@@ -91,8 +92,6 @@ export default function Home() {
             </Container>
             <p>Add tasks for me: <a href="/tasks">Tasks</a> </p>
             <p>You can find all the features which I have added to my website here: <a href="/changeLog">Features Added</a> </p>
-            <p>This website is a Work-in-Progress. Please don't mind the basic UI.</p>
         </div >
-
     );
 }
