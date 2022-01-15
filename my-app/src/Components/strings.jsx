@@ -1,12 +1,12 @@
-import {datediff,getTotalYears,parseDate} from './DateDiff';
+import {datediff,getTotalYears,parseDate,getToday} from './DateDiff';
 
-export const Headline1 = "Hi! I am a Full-Stack Software developer with "+ getTotalYears()+"+ years of experience in developing, testing and deploying web, mobile and cloud applications.";
-export const Headline2 = "This is my React based portfolio website to demonstrate recruiters my knowledge and understanding of various technologies such as React, Angular, Node, C# and Azure etc."
-export const Headline3 = "This website is hosted on Azure Static Web Apps with complete CI/CD using Github Actions."
-export const Headline4 = "I am exploring and learning various React features such as - Functional components, props, hooks, routes, bootstrap etc."
-export const Headline5 = "Currently I'm building a simple Todo App using Preact, TailwindCSS and Vite. Please do check it out here - ";
+export const Headline1 = "Hi! I am a Full-Stack Software developer with "+ getTotalYears(getToday(),"12/11/2018")+"+ years of experience in developing, testing and deploying web, mobile and cloud applications.";
+export const Headline2 = "I'm an aspiring Azure Expert. I love everything cloud. IaaS, PaaS, SaaS you name it. I'm on my journey to become Azure Solutions Architect."
+export const Headline3 = "Successfully achieved Azure DevOps Expert, Azure Developer Associate, Azure Data Engineer Associate, Azure IoT Specialist certifications."
+export const Headline4 = "I am thrilled and excited about Web development. Few technologies I have had hands-on: React, Angular, HTML, CSS, Bootstrap, TailwindCSS, PWA."
+export const Headline5 = "Checkout my simple Todo App made using Preact, TailwindCSS and Vite. ";
 export const About1 = "Hi! I am Vivek Kaushik.";
-export const About2 = { body: "I have been working at Infosys, Chandigarh as a Senior System Engineer for past 2.8+ years now. I have worked mainly in application development and testing roles in wide ranges of technologies." }
+export const About2 = { body: "I am currently employed at Accenture, Gurugram as Application Development Analyst for "+ getTotalYears(getToday(),"19/08/2021")+" years now. I had "+ getTotalYears("18/08/2021","12/11/2018")+" years of experience at Infosys, Chandigarh as a Senior System Engineer. I have worked mainly in application development and testing roles in wide ranges of technologies." }
 export const About3 = { body: "I have done B.Tech in Electrical Engineering from M.I.E.T, Meerut (AKTU, UP) with honors securing 75.4%." }
 export const About4 = { body: "I read books, listen to podcasts, play games, watch youtube, follow latest tech news on web. Sometimes I write for my blog, code a little!" }
 export const About5 = { body: "I have interest in web development, cloud, IoT and in anything tech related, hardware or software. I also have interest in Cosmology, Philosphy, History etc." }

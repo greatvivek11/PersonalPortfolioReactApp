@@ -15,7 +15,7 @@
     "@wordpress/api-fetch": "^3.21.5"
   },
   "devDependencies": {
-    "@azure/functions": "^1.0.2-beta2",
+    "@azure/functions": "^3.0.0",
     "typescript": "^3.3.3"
   }
 }
