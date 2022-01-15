@@ -14,13 +14,13 @@
 
 .Image{
   height: auto;
-  width: 40vmax;
+  width: 50vmax;
   padding: 5pt;
   float: left;
 }
 .badgeImage{
   height: auto;
-  width: 15vmax;
+  width: 20vmax;
 }
 
 .lists{
