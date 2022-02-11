@@ -1,13 +1,12 @@
-import { useContext } from 'react';
 import { lazy, Suspense } from 'react';
-import AppContext from "../Components/context";
 import { updateTasks } from '../Service/Service';
-const ListTasks = lazy(() => import('../Tasks/ListTasks'));
+import { useStore } from '../Store/Store';
+const ListTasks = lazy(() => import('./ListTasks'));
 const AddTasks = lazy(() => import('../Tasks/AddTasks'));
 
 function Tasks() {
-    const { tasks, newTask, setNewTask, setTaskUpdated } = useContext(AppContext);
-    // console.log(tasks); 
+    const { tasks, newTask, setNewTask, setTaskUpdated } = useStore();
+    console.log(tasks); 
 
     function handleTaskChange(newTasks) {
         // console.log(newTasks);

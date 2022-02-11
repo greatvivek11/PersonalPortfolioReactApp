@@ -1,12 +1,12 @@
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import ScrollProgressBar from '../Components/ScrollProgressBar';
-import '../styles/navbar.css'
+import { Nav, Navbar } from 'react-bootstrap';
+import '../styles/navbar.css';
+import ScrollProgressBar from './ScrollProgressBar';
 
 export default function NavbarComponent() {
     return (
         <div>
             <Navbar id="navbar" sticky="top" expand="xl lg">
-                <Navbar.Brand id="navbar-brand" a href="/">Vivek Kaushik</Navbar.Brand>
+                <Navbar.Brand id="navbar-brand" ><a href="/">Vivek Kaushik</a></Navbar.Brand>
                 <Navbar.Toggle id="toggle" aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto" id="nav">
@@ -18,5 +18,5 @@ export default function NavbarComponent() {
                 <ScrollProgressBar />
             </Navbar>
         </div>
-    )
+    );
 }

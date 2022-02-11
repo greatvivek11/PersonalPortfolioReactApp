@@ -1,9 +1,8 @@
-import { useContext } from 'react';
-import AppContext from "../Components/context";
+import { useStore } from '../Store/Store';
 import '../styles/changeLog.css';
 
 function ChangeLog() {
-    const { ChangeLogs } = useContext(AppContext);
+    const { ChangeLogs } = useStore();
 
     return (
         <div className="ChangeLog">

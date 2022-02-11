@@ -1,12 +1,12 @@
 import { Route, Switch } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
-const Blog = lazy(() => import('../Components/Blog'));
-const Project = lazy(() => import('../Components/Projects'));
-const About = lazy(() => import('../Components/About'));
+const Blog = lazy(() => import('./Blog'));
+const Project = lazy(() => import('./Projects'));
+const About = lazy(() => import('./About'));
 const Tasks = lazy(() => import('../Tasks/Tasks'));
-const ChangeLog = lazy(() => import('../Components/ChangeLog'));
-const Home = lazy(() => import('../Components/Home'));
+const ChangeLog = lazy(() => import('./ChangeLog'));
+const Home = lazy(() => import('./Home'));
 
 
 const Routes = () => (
