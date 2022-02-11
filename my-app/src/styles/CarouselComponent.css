@@ -1,18 +1,17 @@
 .myCoverPic{
-    height: 50% ;
-    width: 50% ;
+    height: 40vmax ;
+    width: 60vmax ;
 }
 @media screen and (max-width: 480px) {
     .myCoverPic{
-        height: 70% ;
-        width: 70% ;
+        height: 30vmax ;
+        width: 40vmax ;
     }
 }
 #caption h3{
     color: yellow;
 }
 #caption p{
-    color: lightgreen;
     text-align: center;
 }
 .carousel{

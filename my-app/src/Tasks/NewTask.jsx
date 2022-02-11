@@ -3,7 +3,7 @@ import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { Trash } from 'react-bootstrap-icons';
 import { lazy, Suspense } from 'react';
 import '../styles/Task.css';
-const Editable = lazy(() => import('../Components/Editable.js'));
+const Editable = lazy(() => import('../Components/Editable.jsx'));
 
 function NewTask(props) {
     const element = props.element;

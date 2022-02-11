@@ -7,7 +7,7 @@ function CardComponent(props) {
     const title = props.title;
     return (
         <Card className="card">
-            <Card.Img className="cardImg" variant="top" src={image} srcSet={imageSm+' 480w,'+image+' 1080w'} sizes="50vw" alt="SkillImage" height="10rem" width="10rem" />
+            <Card.Img className="cardImg" variant="top" src={image} srcSet={imageSm+' 480w,'+image+' 1080w'} alt="SkillImage"  />
             <Card.Body className="cardBody" >
                 <Card.Title className="cardTitle">{title}</Card.Title>
             </Card.Body>
