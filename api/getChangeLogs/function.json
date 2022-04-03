@@ -6,7 +6,8 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "get"      ]
+        "get"
+      ]
     },
     {
       "type": "http",
@@ -14,16 +15,11 @@
       "name": "res"
     },
     {
-      "type": "cosmosDB",
-      "name": "getChangeLogs",
-      "databaseName": "TasksDB",
-      "collectionName": "tasks",
-      "connectionStringSetting": "CosmosDBConnection",
-      "direction": "in",
-      "Id": "{Query.id}",
-      "PartitionKey": "{Query.partitionKeyValue}",
-      "CreateLeaseCollectionIfNotExists": "true"
-
+      "name": "tasksBlob",
+      "type": "blob",
+      "path": "ppblobcontainer/ChangeLogs.json",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "in"
     }
   ],
   "scriptFile": "../dist/getChangeLogs/index.js"

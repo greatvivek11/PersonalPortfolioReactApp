@@ -15,16 +15,11 @@
       "name": "res"
     },
     {
-      "type": "cosmosDB",
-      "name": "getTasks",
-      "databaseName": "TasksDB",
-      "collectionName": "tasks",
-      "connectionStringSetting": "CosmosDBConnection",
-      "direction": "in",
-      "Id": "{Query.id}",
-      "PartitionKey": "{Query.partitionKeyValue}",
-      "CreateLeaseCollectionIfNotExists": "true"
-
+      "name": "tasksBlob",
+      "type": "blob",
+      "path": "ppblobcontainer/Tasks.json",
+      "connection": "MyStorageConnectionAppSetting",
+      "direction": "in"
     }
   ],
   "scriptFile": "../dist/getTasks/index.js"
