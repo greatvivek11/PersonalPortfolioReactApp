@@ -16,13 +16,11 @@
     },
     {
       "name": "putTasks",
-      "type": "cosmosDB",
-      "databaseName": "TasksDB",
-      "collectionName": "tasks",
-      "createIfNotExists": true,
-      "connectionStringSetting": "CosmosDBConnection",
+      "type": "blob",
+      "path": "ppblobcontainer/Tasks.json",
+      "connection": "MyStorageConnectionAppSetting",
       "direction": "out"
-  }
+    }
   ],
   "scriptFile": "../dist/putTasks/index.js"
 }
