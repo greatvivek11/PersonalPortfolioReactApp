@@ -53,6 +53,9 @@ import webapp from '/Assets/resources/webapp.png';
 import azfunction from '/Assets/resources/functions.png';
 import logicApps from '/Assets/resources/logicApps.jpg';
 import postman from '/Assets/resources/postman.jpeg';
+import sonarcloud from '/Assets/resources/sonarcloud.png';
+import ghActions from '/Assets/resources/ghActions.jpg';
+import git from '/Assets/resources/git.jpg';
 
 export const dict = {
     "Cloud": {"Azure": {"img":  azurePic , "imgsm": azurePicSm }, "APIM": {"img":  apim , "imgsm": apim }, "ServiceBus": {"img":  sb , "imgsm": sb }, "Azure Storage": {"img":  storage , "imgsm": storage }, "Webapp": {"img":  webapp , "imgsm": webapp }, "AppInsights": {"img":  AppInsights , "imgsm": AppInsights }, "Function": {"img":  azfunction , "imgsm": azfunction }, "LogicApps": {"img":  logicApps , "imgsm": logicApps }},
@@ -66,7 +69,7 @@ export const dict = {
     "Design Pattern": {"Design Patterns":{"img": dp, "imgsm": dp }, "OOP":{"img": oop, "imgsm": oop }, "Functional Programming":{"img": fp, "imgsm": fp }}, 
     "Frameworks": {"Dotnet":{"img": dotnet, "imgsm": dotnet }},
     "Architecture": {"Serverless":{"img": sv, "imgsm": sv },"Microservies":{"img": micro, "imgsm": micro },"EventDriven":{"img": ed, "imgsm": ed }}, 
-    "DevOps": {"Azure DevOps":{"img": devops, "imgsm": devops }}, 
+    "DevOps": {"Azure DevOps":{"img": devops, "imgsm": devops },"Github Actions":{"img": ghActions, "imgsm": ghActions },"Git":{"img": git, "imgsm": git },"SonarCloud":{"img": sonarcloud, "imgsm": sonarcloud }}, 
     "Automation": {"Powershell":{"img": ps, "imgsm": ps },"ARM": {"img":  arm , "imgsm": arm }},
     "Tools": {"Visual Studio":{"img": vs, "imgsm": vs },"Visual Studio Code": {"img":  vsc , "imgsm": vsc }, "Postman": {"img":  postman , "imgsm": postman }}
 };

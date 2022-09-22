@@ -12,7 +12,15 @@ function SkillsAccordian({ dict, styles }) {
                 {keys.map(x => {
                     return (
                         <div className='skillBody' key={x}>
-                            <img className="round-image" loading="lazy" src={dict[e][x].img} srcSet={dict[e][x].imgSm + ' 480w,' + dict[e][x].img + ' 1080w'} alt={x} />
+                            <a href={dict[e][x].img} target="_blank" rel="noreferrer">
+                                <img
+                                    className="round-image"
+                                    loading="lazy"
+                                    src={dict[e][x].img}
+                                    srcSet={dict[e][x].imgSm + ' 480w,' + dict[e][x].img + ' 1080w'}
+                                    alt={x}
+                                />
+                            </a>
                             <p>{x}</p>
                         </div>
                     )

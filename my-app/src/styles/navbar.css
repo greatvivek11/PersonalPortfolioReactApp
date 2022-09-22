@@ -22,7 +22,8 @@
   padding-right: 10pt;
   color: purple;
   font-size: 1.75rem;
-  padding:0 16px 0 16px;
+  padding-left:16px;
+  padding-right:16px;
 }
 #about:hover,#blog:hover,#projects:hover{
   transform: scale(1.15);
