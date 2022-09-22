@@ -1,6 +1,7 @@
 .myCoverPic{
-    height: 40vmax ;
-    width: 60vmax ;
+    height: 40rem ;
+    width: 60rem ;
+    object-fit: cover;
 }
 @media screen and (max-width: 480px) {
     .myCoverPic{
@@ -16,4 +17,5 @@
 }
 .carousel{
     margin: 10pt 0;
+    padding-top: 5%;  
 }

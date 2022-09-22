@@ -10,7 +10,6 @@ export default function About() {
     return (
         <div className="AboutSection">
             <Suspense fallback={<div>Loading...</div>}>
-                <h1>About Me!</h1>
                 <CarouselComponent />
                 <h3>{About1}</h3>
                 <Container>

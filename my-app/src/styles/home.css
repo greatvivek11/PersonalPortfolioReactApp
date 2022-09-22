@@ -3,26 +3,29 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-top: 5%;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media screen and (max-width: 700px) {
   .parent {
     flex-direction: column;
+    padding-top: 10%;
   }
   .Image{
-    width:20vmax
+    height:auto;
+    width:100%;
   }
   .badgeImage{
-    width:10vmax
+    width:10vmax;
   }
 }
 @media screen and (min-width: 1080px) {
   .Image{
-    width:50vmax
+    width:50vmax;
   }
   .badgeImage{
-    width:20vmax
+    width:20vmax;
   }
 }
 .Image{
@@ -34,12 +37,6 @@
 .badgeImage{
   height: auto;
   width: 15vmax;
-}
-.row{
-  /* display: flex;
-  align-items: center;
-  margin: auto;
-  padding:10px; */
 }
 
 .lists{
@@ -60,8 +57,8 @@ li{
   display: inline-block;
   text-align: center;
 }
-.a{
-  color:blue
+a{
+  color: #005bff
 }
 #home_title{
   padding: 0pc;
