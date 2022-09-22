@@ -29,6 +29,7 @@ export default function CarouselComponent() {
                             <Image
                                 className="myCoverPic"
                                 src={x}
+                                loading="lazy"
                                 alt="First slide"
                             />
                             <Carousel.Caption id="caption">

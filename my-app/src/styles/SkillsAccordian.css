@@ -1,0 +1,45 @@
+#header{
+    background: linear-gradient(to right,skyblue,rgb(53, 75, 197));
+    border-radius: 0pt;
+    border-color: transparent;
+    margin: 5pt;
+    
+}
+#card{
+    background:transparent;
+    border: none;
+}
+.skillsBody{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-content:center;
+    justify-content:center;
+    height:auto;
+    padding: 0;
+}
+.skillBody{
+    padding:10pt;
+}
+p{
+    margin: 0 10pt;
+}
+@media screen and (max-width: 480px) {
+    #body{
+        font-size: 0.75rem;
+    }
+    #header{
+        font-size: 1rem;
+    }
+}
+.round-image {
+    margin:auto;
+    padding:auto;
+    max-width: auto;
+    max-height: 5rem;
+    object-fit: cover;
+    background-image: cover;
+    /* border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; */
+}
