@@ -12,7 +12,7 @@ export default function CarouselComponent() {
 
     const images = [pic1, pic2, pic3, pic4, pic5, pic6];
 
-    var coverProp = {
+    const coverProp = {
         0: { title: "His Excellency", subtitle: "Work hard. Play safe." },
         1: { title: "Adventure", subtitle: "Tamil Nadu WaterFalls" },
         2: { title: "Beauty", subtitle: "Flowers" },

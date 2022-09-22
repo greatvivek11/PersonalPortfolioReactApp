@@ -3,10 +3,10 @@ import '../styles/SkillsAccordian.css';
 import { Accordion, Card } from 'react-bootstrap';
 
 function SkillsAccordian({ dict, styles }) {
-    var keys = Object.keys(dict);
+    const keys = Object.keys(dict);
 
     function returnCardBody(e) {
-        var keys = Object.keys(dict[e]);
+        const keys = Object.keys(dict[e]);
         return (
             <Card.Body className="skillsBody">
                 {keys.map(x => {

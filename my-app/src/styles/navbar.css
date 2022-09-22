@@ -18,12 +18,10 @@
 }
 #about,#blog,#projects{
   font-family: Snell Roundhand, cursive;
-  padding-left: 10pt;
-  padding-right: 10pt;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: purple;
   font-size: 1.75rem;
-  padding-left:16px;
-  padding-right:16px;
 }
 #about:hover,#blog:hover,#projects:hover{
   transform: scale(1.15);
