@@ -14,7 +14,7 @@ export default function CarouselComponent() {
 
     const coverProp = {
         0: { title: "His Excellency", subtitle: "Work hard. Play safe." },
-        1: { title: "Adventure", subtitle: "Tamil Nadu WaterFalls" },
+        1: { title: "Adventure", subtitle: "Leh bike trip" },
         2: { title: "Beauty", subtitle: "Flowers" },
         3: { title: "Nerd", subtitle: "Passion and Tech" },
         4: { title: "Nature", subtitle: "Sky and Peace" },
